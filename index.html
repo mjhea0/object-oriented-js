@@ -2,18 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
-    
+    <title>Book List</title>
+    <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    
+
+    <div class="container">
+      <h1>My BOOOOOOOOKS!</h1>
+      <br>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <h2>Add Book</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-title" placeholder="Title" autofocus required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-genre" placeholder="Genre" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-author" placeholder="Author" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg">Add Book</button>
+          </form>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+          <h2>My Books</h2>
+          <table class="table">
+            <thead>
+              <tr><th>Title</th><th>Genre</th><th>Author</th><th>Read?</th></tr>
+            </thead>
+            <tbody id="books">
+            </tbody>
+          </table>
+          <h3>Currently Reading...</h3>
+          <div id="current">Nada</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/dom.js"></script>
+
   </body>
 </html>
